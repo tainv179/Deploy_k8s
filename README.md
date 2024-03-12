@@ -22,7 +22,7 @@ ssh-copy-id {ip_addr}
 sudo passwd root
 ....
 sudo apt-get install openssh-server
-sudo nano /etc/ssh/sshh_config
+sudo nano /etc/ssh/sshd_config
 Add: PermitRootLogin yes
 /etc/init.d/ssh restart
 
