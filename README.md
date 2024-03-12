@@ -54,5 +54,9 @@ sudo nano inventory/sample/group_vars/k8s-cluster/addons.yml
 ansible-playbook -i inventory/mycluster/hosts.yaml  --become --become-user=root reset.yml
 
   
-
+FIx TASK [bootstrap-os : Fetch /etc/os-release] **************************************************************************************************************************************
+fatal: [node1]: FAILED! => {"msg": "Timeout (12s) waiting for privilege escalation prompt: "}
+fatal: [node2]: FAILED! => {"msg": "Timeout (12s) waiting for privilege escalation prompt: "}
+===>>>sudo nano ansible.cfg
+add " timeout = 60"
 
