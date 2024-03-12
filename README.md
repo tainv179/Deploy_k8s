@@ -16,7 +16,7 @@ sudo -i
 curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
 python3.9 get-pip.py
 ssh-keygen -t rsa
-ssh-copy-id {ip_addr}
+ssh-copy-id root@{ip_node}
 
 #in both master and worker
 sudo passwd root
