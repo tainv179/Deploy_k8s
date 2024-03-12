@@ -1,8 +1,10 @@
-# Deploy_k8s
+# k8s with kubespray
 1 master(ubuntu 20.04)
 2 worker(ubuntu 20.04)
-k8s with kubespray
 12/03/2024
+
+
+
 sudo apt-get update -y
 sudo apt install software-properties-common
 sudo add-apt-repository ppa:deadsnakes/ppa
