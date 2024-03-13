@@ -45,7 +45,13 @@ sudo ansible-playbook -i inventory/mycluster/hosts.yaml  --become --become-user=
 mkdir -p $HOME/.kube
 sudo cp /etc/kubernetes/admin.conf $HOME/.kube/config
 sudo chown $(id -u):$(id -g) $HOME/.kube/config
+///////////////////////////////////////////
+Khong can thiet neu khong can :)))))))))))))))))))))
 
+inventory/mycluster/group_vars/all/all.yml
+# upstream_dns_servers:
+#   - 8.8.8.8
+#   - 8.8.4.4
 #addons.yml
 sudo nano inventory/sample/group_vars/k8s-cluster/addons.yml
   dashboard_enabled true
