@@ -42,6 +42,9 @@ sudo nano inventory/mycluster/hosts.yaml (to edit cluster)
 #Create cluster
 sudo ansible-playbook -i inventory/mycluster/hosts.yaml  --become --become-user=root cluster.yml
 
+mkdir -p $HOME/.kube
+sudo cp /etc/kubernetes/admin.conf $HOME/.kube/config
+sudo chown $(id -u):$(id -g) $HOME/.kube/config
 
 #addons.yml
 sudo nano inventory/sample/group_vars/k8s-cluster/addons.yml
