@@ -40,7 +40,7 @@ CONFIG_FILE=inventory/mycluster/hosts.yaml python3.9 contrib/inventory_builder/i
 sudo nano inventory/mycluster/hosts.yaml (to edit cluster)
 
 #Create cluster
-ansible-playbook -i inventory/mycluster/hosts.yaml  --become --become-user=root cluster.yml
+sudo ansible-playbook -i inventory/mycluster/hosts.yaml  --become --become-user=root cluster.yml
 
 
 #addons.yml
