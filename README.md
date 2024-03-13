@@ -15,6 +15,8 @@ sudo apt-get install git pip python3.9 -y
 sudo -i
 curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
 python3.9 get-pip.py
+
+#note: run after line 29
 ssh-keygen -t rsa
 ssh-copy-id root@{ip_node}
 
