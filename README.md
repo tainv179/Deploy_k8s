@@ -18,6 +18,7 @@ python3.9 get-pip.py
 
 #note: run after line 29
 ssh-keygen -t rsa
+#passphrase 170901
 ssh-copy-id root@{ip_node}
 
 #in both master and worker
