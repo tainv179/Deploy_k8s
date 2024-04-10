@@ -65,6 +65,22 @@ sudo nano inventory/sample/group_vars/k8s-cluster/addons.yml
 #Reset:   
 ansible-playbook -i inventory/mycluster/hosts.yaml  --become --become-user=root reset.yml
 
+
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: my-pv1
+spec: 
+  capacity: 
+    storage: 5Gi
+  volumeMode: Filesystem
+  accessModes:
+    - ReadWriteOnce
+  storageClassName: wazuh-storage
+  persistentVolumeReclaimPolicy: Retain
+  hostPath:
+    path: "/data"
+
   
 FIx TASK [bootstrap-os : Fetch /etc/os-release] **************************************************************************************************************************************
 fatal: [node1]: FAILED! => {"msg": "Timeout (12s) waiting for privilege escalation prompt: "}
