@@ -20,3 +20,16 @@ spec:
     server: node004.b9tcluster.local
     path: /data
     readOnly: no
+
+/////////////////////
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: nfs-test
+spec:
+  accessModes:
+    - ReadWriteMany
+  storageClassName: nfs-client
+  resources:
+    requests:
+      storage: 1Gi
